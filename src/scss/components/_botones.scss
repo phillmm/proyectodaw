@@ -1,0 +1,20 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.boton-enviar,
+.boton-verde {
+    @include m.boton(v.$verde800, v.$blanco);
+}
+
+.boton-enviar--dark {
+    @include m.boton(v.$verde700, v.$blanco);
+}
+
+.boton-salir {
+    @include m.boton(v.$verde600, v.$verde950);
+}
+
+.boton-comprar,
+.boton-amarillo {
+    @include m.boton(#F98207, v.$blanco);
+}

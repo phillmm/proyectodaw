@@ -1,0 +1,57 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.catalogo {
+    width: 100%;
+    @include m.grid(6, 2rem);
+
+    &__tarjeta {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 1rem;
+        gap: 1rem;
+        background-color: #F4F4F4;
+        border-radius: 2rem;
+        overflow: hidden;
+
+        &--texto {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0 1rem;
+        }
+
+        &--titulo {
+            text-transform: uppercase;
+            margin: 0;
+            color: #F98207;
+            font-weight: v.$semibold;
+            text-align: center;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+
+        &--autor,
+        &--genero {
+            text-transform: uppercase;
+            margin: 0;
+            text-align: center;
+            color: v.$verde950;
+            font-size: 1.2rem;
+        }
+
+        &--genero {
+            color: #616161;
+        }
+
+        &--precio {
+            color: v.$verde800;
+            font-weight: v.$semibold;
+            text-align: right;
+        }
+    }
+}
